@@ -34,3 +34,54 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Folder Structure
+
+```sh
+/cafe-management-system
+├── /public
+│   ├── index.html
+│   └── favicon.ico
+├── /src
+│   ├── /assets                     # Images, fonts, and other assets
+│   │   └── logo.svg
+│   ├── /components                 # Reusable components
+│   │   ├── Sidebar.vue
+│   │   ├── SidebarGroup.vue
+│   │   ├── SidebarLink.vue
+│   │   ├── SidebarDropdown.vue
+│   │   ├── /orders                 # Components related to orders
+│   │   │   ├── OrderAddForm.vue
+│   │   │   └── OrderEditForm.vue
+│   │   ├── /products               # Components related to products
+│   │   │   ├── ProductAddForm.vue
+│   │   │   └── ProductEditForm.vue
+│   │   └── /customers              # Components related to customers
+│   │       ├── CustomerAddForm.vue
+│   │       └── CustomerEditForm.vue
+│   ├── /layouts                    # Layout components (e.g., MainLayout, AuthLayout)
+│   │   └── MainLayout.vue
+│   ├── /views                      # Page components (each representing a route)
+│   │   ├── HomeView.vue
+│   │   ├── DashboardView.vue
+│   │   ├── OrdersView.vue
+│   │   └── ProductsView.vue
+│   ├── /router                     # Vue Router configuration
+│   │   └── index.js
+│   ├── /store                      # Vuex store (state management)
+│   │   └── index.js
+│   ├── /services                   # API service files
+│   │   └── ApiService.js
+│   ├── /utils                      # Utility functions
+│   │   └── helpers.js
+│   ├── /styles                     # Global and component-specific styles
+│   │   └── global.css
+│   ├── App.vue                     # Main Vue component
+│   └── main.js                     # Entry file
+├── /tests                          # Unit and integration tests
+│   └── example.test.js
+├── .env                            # Environment variables
+├── .gitignore                      # Git ignore file
+├── package.json                    # npm package configuration
+└── README.md                       # Documentation
+```
