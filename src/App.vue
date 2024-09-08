@@ -1,0 +1,3 @@
+<template>
+  Mingalar Par  
+</template>

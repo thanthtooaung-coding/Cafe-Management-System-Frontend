@@ -9,25 +9,28 @@ This is the frontend of the Cafe Management System, built with Vue.js to manage 
 - Order management
 - Employee and customer data handling
 
-## Installation
-1. Clone the repository.
-  ```bash
-  git clone <https://github.com/thanthtooaung-coding/Cafe-Management-System-Frontend>
-  ```
-2. Install dependencies.
-  ```bash
-  npm install
-  ```
-3. Run the project.
-  ```bash
-  npm install
-  ```
+## Recommended IDE Setup
 
-## API Integration
-This frontend communicates with the backend API (Spring Boot).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Technologies Used
-- Vue.js
+## Customize configuration
 
-## License
-This project is licensed under the [MIT License](./LICENSE).
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+``` 
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
