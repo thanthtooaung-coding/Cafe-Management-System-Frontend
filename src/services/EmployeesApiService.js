@@ -2,8 +2,14 @@
 import apiClient from './ApiService';
 
 export default {
-    getEmployees() {
-        return apiClient.get('/employee');
+    getEmployees(page = 0, size = 10, search = '') {
+        return apiClient.get('/employee/page', {
+            params: {
+                page: page,
+                size: size,
+                search: search
+            }
+        });
     },
 
     addEmployee(employee) {
