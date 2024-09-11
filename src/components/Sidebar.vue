@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 import SidebarDropdown from './SidebarDropdown.vue';
 import SidebarHeader from './SidebarHeader.vue';
 import SidebarLink from './SidebarLink.vue';
@@ -26,15 +28,22 @@ export default {
         SidebarLinkGroup,
         SidebarDropdown
     },
-    data() {
-        return {
-        activeLink: 'home'
+    setup() {
+        const route = useRoute();
+        const activeLink = ref(route.path.substring(1));
+
+        watch(() => route.path, (newPath) => {
+            activeLink.value = newPath.substring(1);
+        });
+
+        const setActiveLink = (link) => {
+            activeLink.value = link;
         };
-    },
-    methods: {
-        setActiveLink(link) {
-            this.activeLink = link;
-        }
+
+        return {
+            activeLink,
+            setActiveLink
+        };
     }
 }
 </script>
